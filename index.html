@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World of Etheirys - World of Etheirys</title>
+    
+    <script>
+            document.documentElement.classList.remove('dark');
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+	<style type="text/tailwindcss">
+        @layer components {
+            .btn-primary {
+                @apply bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-200 shadow-md hover:shadow-lg;
+            }
+            .btn-secondary {
+                @apply bg-gray-600 hover:bg-gray-700 dark:bg-gray-500 dark:hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-200 shadow-md hover:shadow-lg;
+            }
+            .btn-outline {
+                @apply bg-transparent hover:bg-blue-50 dark:hover:bg-blue-900/30 text-blue-600 dark:text-blue-400 border border-blue-600 dark:border-blue-400 font-semibold py-2 px-4 rounded-lg transition duration-200;
+            }
+            .card {
+                @apply bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition duration-300 p-6;
+            }
+            .badge {
+                @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+            }
+            .badge-blue {
+                @apply badge bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200;
+            }
+            .badge-green {
+                @apply badge bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200;
+            }
+            .badge-red {
+                @apply badge bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200;
+            }
+        }
+        
+        .logo-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            letter-spacing: -0.015em;
+            transition: opacity 0.2s ease;
+            padding-bottom: 0.25rem;
+            display: inline-block;
+        }
+        .dark .logo-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #a5b4fc 50%, #c4b5fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .logo-text:hover {
+            opacity: 0.85;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        .animate-slide-up {
+            animation: slideUp 0.5s ease-out;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #1f2937;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #4b5563;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        .dark ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280;
+        }
+    </style>
+</head>
+	
+<body class="min-h-screen flex flex-col relative">
+    <div b-gradient class="fixed inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-blue-950 dark:via-purple-950 dark:to-pink-950 -z-10 transition-colors duration-300"></div>
+    <div b-gradient class="fixed inset-0 bg-grid-pattern opacity-5 dark:opacity-10 -z-10"></div>
+    
+    <main b-gradient class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+<!-- Hero Section -->
+<div class="relative z-10 pb-8 sm:pb-12 md:pb-16 lg:pb-20">
+    <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28">
+
+        <!-- Main Heading -->
+        <div class="text-center animate-slide-up">
+            <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl lg:text-7xl">
+                <span class="block text-gray-900 dark:text-gray-100 mb-2">Welcome to</span>
+                <span class="block logo-text text-5xl md:text-7xl lg:text-8xl pb-4 leading-tight" style="padding-bottom: 1rem;">World of Etheirys</span>
+            </h1>
+            <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300 sm:text-xl md:mt-8 md:text-2xl leading-relaxed">
+                The upcoming hub for Final Fantasy XIV creativity and community
+            </p>
+        </div>
+
+        <!-- Service Description Section -->
+        <div class="mt-16 md:mt-20 animate-fade-in">
+            <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 sm:p-12 lg:p-16 transition-colors duration-300 border border-gray-200 dark:border-gray-700">
+                <h1 class="text-3xl font-extrabold text-gray-900 dark:text-gray-100 text-center mb-8">
+                    What is World of Etheirys?
+                </h1>
+                <div class="prose prose-lg dark:prose-invert max-w-4xl mx-auto">
+                    <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed text-center">
+                        From the Brio dev comes, World of Etheirys an upcoming community platform with the idea of bring together eveyone who love to customize and share their creative content. 
+                        Whether you're passionate about glamours, poses, mods or Brio, this will be your central hub to discover, share, and celebrate the creativity of the FFXIV community.
+                    </p>
+                </div>
+                <h2 class="text-3xl font-extrabold text-gray-900 dark:text-gray-100 text-center mb-8">
+                    Hasn't this been done before?
+                </h2>
+                <div class="prose prose-lg dark:prose-invert max-w-4xl mx-auto">
+                    <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed text-center">
+                        Sort of! There have been various community efforts in the past to create mod repositories and galleries for FFXIV content, but World of Etheirys aims to be a comprehensive, user-friendly platform. 
+                        Made with the community, from the very start, not hidden away to one day be a surprise.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed text-center">
+                        This will be a hard project, there is no doubt about that, there will be a lot of opinions, again, this isn't the first time this has tried to be done, but with the help and effort of the community, I think we can make something great together.
+                    </p>
+                </div>
+                <h2 class="text-3xl font-extrabold text-gray-900 dark:text-gray-100 text-center mb-8">
+                    What are the features!?
+                </h2>
+                <div class="prose prose-lg dark:prose-invert max-w-4xl mx-auto">
+                    <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed text-center">
+                        Below you can find a very short list of features I am aiming to implement for launch, the idea here is that this is all based on the community feedback and what you all want to see, so if you all don't want something, I won't build it, but if you do, so shall I do so! 
+                        With that, please join the Discord and let me know your thoughts and feedback! Hope to see you there! And, Happy Posing!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Launch Banner -->
+        <div class="mt-12 text-center">
+            <div class="inline-flex items-center px-6 py-3 rounded-full bg-yellow-100 dark:bg-yellow-900/30 border border-yellow-200 dark:border-yellow-700">
+                <i class="fa-solid fa-clock text-yellow-600 dark:text-yellow-400 mr-2 text-lg"></i>
+                <span class="text-sm font-semibold text-yellow-800 dark:text-yellow-300">
+                    Currently in Development - Launch Date Coming Soon
+                </span>
+            </div>
+        </div>
+
+        <!-- Features Overview -->
+        <div class="mt-16 md:mt-20">
+            <h2 class="text-3xl font-extrabold text-gray-900 dark:text-gray-100 text-center mb-12">
+                Coming Soon
+            </h2>
+            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+                
+                <!-- Glamours Feature -->
+                <div class="animate-slide-up">
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 h-full">
+                        <div class="flex items-center justify-center w-16 h-16 mb-6 rounded-xl mx-auto" style="background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);">
+                            <i class="fa-solid fa-shirt text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 text-center mb-4">Glamour and MCDF Gallery</h3>
+                    </div>
+                </div>
+
+                <!-- Mods Feature -->
+                <div class="animate-slide-up" style="animation-delay: 0.1s;">
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 h-full">
+                        <div class="flex items-center justify-center w-16 h-16 mb-6 rounded-xl mx-auto" style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);">
+                            <i class="fa-solid fa-cubes text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 text-center mb-4">Mod Repository</h3>
+                    </div>
+                </div>
+
+                <!-- Poses Feature -->
+                <div class="animate-slide-up" style="animation-delay: 0.2s;">
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 h-full">
+                        <div class="flex items-center justify-center w-16 h-16 mb-6 rounded-xl mx-auto" style="background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);">
+                            <i class="fa-solid fa-camera text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100 text-center mb-4">Pose Collection</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Brio Online Section -->
+        <div class="mt-16 md:mt-20 animate-fade-in">
+            <div class="bg-gradient-to-r from-purple-50 via-pink-50 to-blue-50 dark:from-gray-800 dark:via-gray-850 dark:to-gray-800 rounded-3xl shadow-2xl p-8 sm:p-12 lg:p-16 transition-colors duration-300 border border-purple-200 dark:border-gray-700">
+                <h2 class="text-3xl font-extrabold text-gray-900 dark:text-gray-100 text-center mb-8">
+                    Brio Online
+                </h2>
+                <div class="prose prose-lg dark:prose-invert max-w-4xl mx-auto">
+                    <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed text-center mb-6">
+                        Brio Online, Moving forward with the advancement of MCDO, now built into Brio
+                    </p>
+                </div>
+                
+                <!-- Brio Features -->
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <div class="bg-white dark:bg-gray-700 rounded-xl p-6 border border-purple-100 dark:border-gray-600">
+                        <div class="flex items-center mb-3">
+                            <i class="fa-solid fa-cloud text-purple-600 dark:text-purple-400 text-2xl mr-3"></i>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100">Cloud-Based Pose/MCDF Sharing</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">
+                            Upload to save and share your poses with Friends 
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-700 rounded-xl p-6 border border-purple-100 dark:border-gray-600">
+                        <div class="flex items-center mb-3">
+                            <i class="fa-solid fa-users text-purple-600 dark:text-purple-400 text-2xl mr-3"></i>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100">GPose-Together</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">
+                            The same Idea is GPose-Together, Get into a session with friends and pose live, Together!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Discord Join Section -->
+        <div class="mt-20 md:mt-24 mb-16 animate-fade-in" style="animation-delay: 0.3s;">
+            <div class="bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-800 rounded-3xl shadow-2xl p-12 sm:p-16 text-center border border-gray-200 dark:border-gray-700">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-gray-100 mb-6">
+                        Join Our Community
+                    </h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                        Join our Discord server to stay updated on the launch!
+                    </p>
+                    
+                    <a href="https://discord.gg/GCb4srgEaH"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center px-8 py-4 text-lg font-bold text-white bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
+                        <i class="fa-brands fa-discord text-3xl mr-3"></i>
+                        Join Discord Server
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</div>
+
+    </main>
+
+    <footer b-tj7x0l9kb7 class="mt-auto bg-gradient-to-r from-white/95 via-white/98 to-white/95 dark:from-gray-800/95 dark:via-gray-800/98 dark:to-gray-800/95 backdrop-blur-sm border-t border-gray-200 dark:border-gray-700 shadow-lg transition-colors duration-300">
+        <div b-tj7x0l9kb7 class="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div b-tj7x0l9kb7 class="text-center text-gray-600 dark:text-gray-400 text-sm">
+                © 2026 World of Etheirys - This website is not in anyway affiliated with SQUARE ENIX CO. LTD. or FINAL FANTASY XIV © 2010-2025
+            </div>
+        </div>
+    </footer>  
+</html>
